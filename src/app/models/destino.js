@@ -1,35 +1,40 @@
-import { DataTypes } from "sequelize";
-import sequelize from '../../database/index';
+import Sequelize, { Model } from "sequelize";
 
-const Destino = sequelize.define(
-    'destino',
+class Destino extends Model {
+  static init(sequelize){
+    super.init({
+      id:{
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+      },
+      rua:{
+        type: Sequelize.STRING(100),
+        allowNull: false
+      },
+      numeroCasa:{
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      uf:{
+        type: Sequelize.STRING(2),
+        allowNull: false
+      },
+      peso:{
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      valor: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      }
+    },
     {
-        id:{
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-          },
-          rua:{
-            type: DataTypes.STRING(100),
-            allowNull: false
-          },
-          numeroCasa:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
-          },
-          uf:{
-            type: DataTypes.STRING(2),
-            allowNull: false
-          },
-          peso:{
-            type: DataTypes.INTEGER,
-            allowNull: false
-          },
-          valor: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-          }
-    }
-)
+      sequelize,
+      schema: 'correios',
+      tableName: 'destino'
+    })
+  }
+}
 
 export default Destino;

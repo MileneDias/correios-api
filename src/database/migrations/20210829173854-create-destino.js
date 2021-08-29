@@ -25,11 +25,17 @@ module.exports = {
       type: Sequelize.INTEGER,
       allowNull: false
     }
+  },{
+    schema: 'correios',
+    tableName: 'destino'
   })
     
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('destino');
+    await queryInterface.dropTable({
+      schema: 'correios',
+      tableName: 'destino'
+    });
   }
 };
