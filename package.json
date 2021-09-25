@@ -4,7 +4,7 @@
   "description": "projeto correios",
   "author": "Milene",
   "scripts": {
-    "dev": "nodemon src/routes.js",
+    "dev": "nodemon ./src/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
