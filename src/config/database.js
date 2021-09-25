@@ -1,6 +1,10 @@
 module.exports = {
     dialect: 'postgres',
-    url: 'postgres://pgdjkysptfoxed:fdea9a306d31e103bd63626b74b83c227d77ddf8e9ed7ecdee80d2c43028023c@ec2-54-147-93-73.compute-1.amazonaws.com:5432/d4fgja1p13nnn8',
+    host: 'ec2-54-147-93-73.compute-1.amazonaws.com',
+    //url: 'postgres://pgdjkysptfoxed:fdea9a306d31e103bd63626b74b83c227d77ddf8e9ed7ecdee80d2c43028023c@ec2-54-147-93-73.compute-1.amazonaws.com:5432/d4fgja1p13nnn8',
+    username: 'pgdjkysptfoxed',
+    password: 'fdea9a306d31e103bd63626b74b83c227d77ddf8e9ed7ecdee80d2c43028023c',
+    port: 5432,
     define: {
         timestamps: false,
         underscored: true,

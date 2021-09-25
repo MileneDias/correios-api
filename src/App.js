@@ -1,10 +1,26 @@
-import React from 'react';
-import Routes from './routes';
+import express from 'express';
 
-export default function App() {
-  return  (
-    <React.Fragment>
-      <Routes />
-    </React.Fragment>
-  )
+import DestinoRoute from './app/routes/destino';
+import './database/index';
+
+class App {
+    constructor(){
+        this.server = express();
+        this.config();
+        this.routers();
+    }
+
+    config(){
+        this.server.use(express.json()); //receber json no body
+    }
+
+    middlewares(){
+
+    }
+
+    routers(){
+        this.server.use(DestinoRoute);
+    }
 }
+
+export default new App().server;

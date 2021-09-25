@@ -16,7 +16,7 @@ export default function Campos(){
             <form className={classes.root} noValidate autoComplete="off">
                 <TextField id="standard-basic" label="Rua" />
                 <br />
-                <TextField id="standard-basic" label="Número da Casa" />
+                <TextField type="number" id="standard-basic" label="Número da Casa" />
                 <br />
                 <FormControl variant="filled" className={classes.formControl}>
                     <InputLabel htmlFor="filled-age-native-simple">UF</InputLabel>
@@ -34,9 +34,9 @@ export default function Campos(){
                     </Select>
                 </FormControl>
                 <br />
-                <TextField id="standard-basic" label="Peso do Pacote" />
+                <TextField type="number" id="standard-basic" label="Peso do Pacote" />
                 <br />
-                <TextField id="standard-basic" label="Valor da Entrega" />
+                <TextField type="number" id="standard-basic" label="Valor da Entrega" />
             </form>
         </Container>
     );
